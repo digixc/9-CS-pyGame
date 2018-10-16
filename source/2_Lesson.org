@@ -1,5 +1,6 @@
 #+STARTUP:indent
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+HTML_HEAD_EXTRA: <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 #+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
@@ -28,6 +29,24 @@
       <li><a href="assessment.html">Assessment</a></li>
     </ul>
   </div>
+
+
+
+<div id="underlay" onclick="underlayoff()">
+</div>
+<div id="overlay" onclick="overlayoff()">
+</div>
+<div id=overlayMenu>
+<p onclick="overlayon('hsla(0, 0%, 50%, 0.5)')">Grey overlay</p>
+<p onclick="underlayon('hsla(300,100%,50%, 0.3)')">Pink</p>
+<p onclick="underlayon('hsla(80, 90%, 40%, 0.4)')">Green</p>
+<p onclick="underlayon('hsla(240,100%,50%,0.2)')">Blue</p>
+<p onclick="underlayon('hsla(40,100%,50%,0.3)')">Cream</p>
+<p onclick="underlayon('hsla(300,100%,40%,0.3)')">Liliac</p>
+<p onclick="underlayon('hsla(300,100%,25%,0.3)')">Purple</p>
+<p onclick="underlayon('hsla(60,100%,50%,0.3)')">Yellow</p>
+</div>
+
 #+END_HTML
 * COMMENT Use as a template
 :PROPERTIES:
@@ -173,12 +192,13 @@ screen.fill(black)
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- Selection one of the three basic logic structures in computer programming. The other two logic structures are sequence and iteration. In a selection structure, a question is asked, and depending on the answer, the program takes one of two courses of action, after which the program moves on to the next event
+- *Selection* is one of the three basic logic structures in computer programming. The other two logic structures are *sequence* and *iteration*
+- In a selection structure, a question is asked, and depending on the answer, the program takes certain courses of action, after which the program moves on to the next event
 - Humans might see selection like this
 [[./img/2-4.png]]
 - Computers see things like this...
 [[./img/2-5.png]]
-- We are going to use value of the =player1X= variable to determine if =player1= has moved off the screen.
+- We are going to use value of the =player1X= variable to determine if =player1= has moved off the screen. This translates into python code as * if* statement.
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
@@ -189,6 +209,8 @@ screen.fill(black)
 player1 = pygame.draw.rect(screen, green, (player1X, 200, 20, 20))
 player1X = player1X + 4
 
+# selection: depending on the outcome of this comparison, 
+# player1X will be set to 0 or not
 if player1X > SCREENWIDTH:
     player1X = 0
 #+end_src
@@ -235,8 +257,6 @@ if player1X > SCREENWIDTH:
 [[./img/2-8.PNG]]
 - Which two lines have changed? Why?
 - What is needed to make the shape bounce off the left-hand edge of the window too?
-
-
 - Can you change the size of the window? 
 - Can you make the square travel only half-way accross the screen before reversing direction?
 - Can you make the square bounce up and down?
@@ -250,7 +270,7 @@ if player1X > SCREENWIDTH:
 - *Gold:* Make a piece of animation. Create a circle that:
   - Appears at  x = 100, y = 100
   - Moves to x = 100, y = 700
-  - Re-appears at x = 100, y = 100
+  - Re-appears at x = 100, y = 100  (*hint: use selection to decide if the circle has reached 700 at y direction*)
 - *Platinum:* Make a shape move diagonally and bounce off all the sides of the screen.
 
 ** Badge It
