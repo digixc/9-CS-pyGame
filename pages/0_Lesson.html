@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Pygame</title>
+<title>Game Development with pyGame</title>
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <link rel="stylesheet" type="text/css" href="css/styles.css"/>
@@ -59,115 +59,78 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Pygame</h1>
+<h1 class="title">Game Development with pyGame</h1>
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/stsb11/9-CS-pyGame">Fork me on GitHub</a>
+      <a href="https://github.com/stsb11/9-CS-pyGame.git">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
     <ul>
+
       <li><a href="1_Lesson.html">Week1</a></li>
       <li><a href="2_Lesson.html">Week2</a></li>
       <li><a href="3_Lesson.html">Week3</a></li>
       <li><a href="4_Lesson.html">Week4</a></li>
       <li><a href="5_Lesson.html">Week5</a></li>
-      <li><a href="6_Lesson.html">Week2</a></li>
-      <li><a href="7_Lesson.html">Week3</a></li>
-      <li><a href="8_Lesson.html">Week4</a></li>
-      <li><a href="9_Lesson.html">Week5</a></li>
+      <li><a href="6_Lesson.html">Week6</a></li>
+      <li><a href="7_Lesson.html">Week7</a></li>
+      <li><a href="8_Lesson.html">Week8</a></li>
+      <li><a href="9_Lesson.html">Week9</a></li>
       <li><a href="assessment.html">Assessment</a></li>
     </ul>
   </div>
+
+
+<div id="underlay" onclick="underlayoff()">
+</div>
+<div id="overlay" onclick="overlayoff()">
+</div>
+<div id=overlayMenu>
+<p onclick="overlayon('hsla(0, 0%, 50%, 0.5)')">Grey overlay</p>
+<p onclick="underlayon('hsla(300,100%,50%, 0.3)')">Pink</p>
+<p onclick="underlayon('hsla(80, 90%, 40%, 0.4)')">Green</p>
+<p onclick="underlayon('hsla(240,100%,50%,0.2)')">Blue</p>
+<p onclick="underlayon('hsla(40,100%,50%,0.3)')">Cream</p>
+<p onclick="underlayon('hsla(300,100%,40%,0.3)')">Liliac</p>
+<p onclick="underlayon('hsla(300,100%,25%,0.3)')">Purple</p>
+<p onclick="underlayon('hsla(60,100%,50%,0.3)')">Yellow</p>
+</div>
 <div id="outline-container-sec-1" class="outline-2 activity">
-<h2 id="sec-1">pyGame at home</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> Overview of this Unit.</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-sec-1-1" class="outline-3 code">
-<h3 id="sec-1-1">Code It</h3>
+
+<div id="outline-container-sec-1-1" class="outline-3 objectives">
+<h3 id="sec-1-1">This unit is designed for you to work towards the following strands of your progress ladder:</h3>
 <div class="outline-text-3" id="text-1-1">
+
+<p>
+<b>Programming &amp; Development</b>
+</p>
 <ul class="org-ul">
-<li>You may wish to try making your own games at home.
+<li>Develop understanding that programming bridges the gap between <b>algorithmic solutions</b> and computers (<b>automation</b>). 
 </li>
-<li><b>Windows</b>
-<ul class="org-ul">
-<li>Step 1: Install <a href="https://www.python.org/ftp/python/3.2/python-3.2.msi">32-bit Python 3.2</a>.
+<li>Developing practical skills, including using program library <b>pygame</b> when programming, using a range of operators and expressions e.g. Boolean, and applies them in the context of program control.
 </li>
-<li>Step 2: Install <a href="http://pygame.org/ftp/pygame-1.9.2a0.win32-py3.2.msi">pyGame 1.9.2</a>.
+<li>Developing understanding the difference between, and appropriately uses <b>if</b> and <b>if-then</b> and <b>else</b> statement.
+</li>
+<li>Developing skills in using <b>selections</b> (if statements) and <b>loops</b> (while and for loops) to control the flow of a program.
 </li>
 </ul>
-</li>
-</ul>
-
-
-<ul class="org-ul">
-<li><b>MacOS</b>
-<ul class="org-ul">
-<li>Follow the steps <a href="http://florian-berger.de/en/articles/installing-pygame-for-python-3-on-os-x/">here</a>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<ul class="org-ul">
-<li><b>Ubuntu Linux</b>
-<ul class="org-ul">
-<li>Open a terminal, and copy/paste these commands one at a time:
-</li>
-
-<li>Change in to your home directory
-</li>
-</ul>
-</li>
-</ul>
-<div class="org-src-container">
-
-<pre class="src src-python">cd ~
-</pre>
-</div>
-
-<ul class="org-ul">
-<li>Pick up the pyGame source code
-</li>
-</ul>
-<div class="org-src-container">
-
-<pre class="src src-python">sudo apt-get install mercurial
-hg clone https://bitbucket.org/pygame/pygame
-cd pygame
-</pre>
-</div>
-
-<ul class="org-ul">
-<li>Pick up some additional dependencies we'll need
-</li>
-</ul>
-<div class="org-src-container">
-
-<pre class="src src-python">sudo apt-get install python3-dev python3-numpy libsdl-dev libsdl-image1.2-dev \
-  libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsmpeg-dev libportmidi-dev \
-  libavformat-dev libswscale-dev libjpeg-dev libfreetype6-dev
-</pre>
-</div>
-
-<ul class="org-ul">
-<li>Build and install
-</li>
-</ul>
-<div class="org-src-container">
-
-<pre class="src src-python">python3 setup.py build
-sudo python3 setup.py install
-</pre>
 </div>
 </div>
-</div>
-<div id="outline-container-sec-1-2" class="outline-3 test">
-<h3 id="sec-1-2">Test It</h3>
+<div id="outline-container-sec-1-2" class="outline-3 objectives">
+<h3 id="sec-1-2">Key Words and Key Concepts</h3>
 <div class="outline-text-3" id="text-1-2">
+
+
 <ul class="org-ul">
-<li>To test your installation works, load IDLE, type <code>import pygame</code> in the console and hit enter. If you don't see any errors, you're ready to go.
+<li>pyGame Python library for game developement
+</li>
+<li>selection in programming, i.e. if, if-elif-else in Python
+</li>
+<li>repeatition in programming, i.e. for loops and while loops in Python
 </li>
 </ul>
 </div>
