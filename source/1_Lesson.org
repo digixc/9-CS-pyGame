@@ -115,13 +115,12 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: objectives
 :END:
-** Developing *Programming and Development* (learning strand) skills so that:
+** Developing *Programming and Development* (learning strand) skills, specifically:
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- Understand that programming bridges the gap between algorithmic solutions and computers.
-- Use textual programming language, and standard libraries/modules when programming. 
-- Use a range of operators, expressions, if statements, loops and data types in the context of a given problem.
+- Understand that computers store and display shapes by using a drawing list of locations, dimensions and other properties.
+- Understand game animation is achieved by refresh/reload/update the screen with new data at a regular time intervals.
 
 * Introduction
 :PROPERTIES:

@@ -271,6 +271,9 @@ form {
 .save h3 {
   background-image: url(icons/Save.svg);
 }
+.objectives h3 {
+  background-image: url(icons/objectives.png);
+}
 h3 {
   color: #0071BB;
   background-position: 0px 10px;

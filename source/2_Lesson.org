@@ -112,6 +112,18 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
+* Objectives
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: objectives
+:END:
+** Developing *Programming and Development* (learning strand), specifically:
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Understand the concept of *selection*, i.e. using *if-else, if-elif*, to branch the flow of action
+- Understand that variables can be changed to reflect/keep track of the state (position, colour etc) of a game object
+- Understand that *game animation* is implemented using *repetition* and game object states changing.
+
 * Move it!
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
