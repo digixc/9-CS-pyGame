@@ -8,7 +8,7 @@
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
 
 #+TITLE: Pygame
-#+AUTHOR: Oliver Drayton
+#+AUTHOR: Stephen Fone
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
@@ -111,6 +111,18 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
+* Objectives
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: objectives
+:END:
+** Developing *Programming and Development* (learning strand), specifically:
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Understand the concept of *Sprites* and how they can used as game objects.
+- Understand and use variables to change to keep track of the X and Y coordinates of a sprite.
+- Understand the process of painting the screen with image(s) known as *Bit Blitting* or *Blit*.
+- Understand how to use X, Y coordinates to position and re-size a sprite.
 * Images
  :PROPERTIES:
  :HTML_CONTAINER_CLASS: activity
@@ -147,21 +159,20 @@ BEGIN GAME LOOP
 - The graphic(s) we wish to load only need to be loaded into the computer's memory once. 
 - If we loaded the file from the computer's hard drive 60 times a second, we would get very poor game performance.
 - The process of painting the screen with our loaded image(s) is called /bit blitting/, or just '[[https://en.wikipedia.org/wiki/Bit_blit][blit]]' for short. 
-- Start by adding this code just under line 16.
-- *NOTE:* you can make line numbers appear next to your code by right-clicking the tall, thin grey empty area that sits just to the left of your code in pyCharm, then clicking 'Show line numbers':
+- Start by adding this code above the *gameState = running* line.
 #+begin_src python
 player1Image = pygame.image.load("gimp2.png")
 player1XY = [100, 100]
 #+end_src
 
-- Then add these lines under =line 27= to display (blit) the image on the screen:
-- *NOTE:* Make sure these lines are indented, otherwise they won't work.
+- Then add these lines under *# your code starts here* to display (blit) the image on the screen:
+- *NOTE:* Make sure these lines are *double-indented*, otherwise they won't work.
  #+begin_src python
     screen.fill(black)
     player1 = screen.blit(player1Image, player1XY)
 #+end_src
 - We now have a static image. To make it a little more interactive, let's  make the sprite follow the mouse. We’ve done this before but we are going to improve our method. 
-- Add these two line underneath the =screen.fill(black)= command on line 28 (don't forget to indent!):
+- Add these two line underneath the *player1 = screen.blit(player1Image, player1XY)* line (/Don't forget to double-indent!/):
 #+begin_src python
     mousePosition = pygame.mouse.get_pos()
     player1XY = mousePosition[0], mousePosition[1] 
@@ -173,7 +184,7 @@ player1XY = [100, 100]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- Our app is coming along, but we've a few improvements that are needed to make this better.
+- Our game is coming along, but we've a few improvements that are needed to make this better.
   - The mouse cursor isn't centred on the image,
   - The mouse cursor is visible, which looks unsightly,
   - The image is a little large. 
@@ -193,9 +204,9 @@ player1Image = pygame.transform.scale(player1Image, player1ImageSizeXY)
 [[./img/5-6.png]]
 - The image is currently being drawn on the screen starting at (120, 90) which is where the mouse pointer is. This is the top-left corner of the image. 
 - To get the image to centre up, we need to tell PyGame to draw the image a bit further to the left, and a bit further up. How much, though?
-- The width of our image (in pixels) is always stored in the variable called =player1ImageSizeXY[]=. When we want the X position, we use ==player1ImageSizeXY[0]= and when we want the Y position, we use =player1ImageSizeXY[1]=. 
-- Just thinking about the X position first, we need to draw the image at where the mouse currently is (on the X axis; 120 pixels across in this example), then...
-- Half the width of the image over to the left (50 pixels in this case). 
+- The width of our image (in pixels) is always stored in the variable called *player1ImageSizeXY[]*. When we want the X position, we use *player1ImageSizeXY[0]* and when we want the Y position, we use *player1ImageSizeXY[1]*. 
+- Just thinking about the X position first, we need to draw the image at where the mouse currently is (/On the X axis; 120 pixels across in this example/), then...
+- Half the width of the image over to the left (/50 pixels in this case/). 
 - The same idea applies to the Y axis.
 - Our formula is:
 #+begin_src

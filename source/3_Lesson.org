@@ -8,7 +8,7 @@
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
 
 #+TITLE: Pygame
-#+AUTHOR: Oliver Drayton
+#+AUTHOR: Stephen Fone
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
@@ -111,6 +111,17 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
+* Objectives
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: objectives
+:END:
+** Developing *Programming and Development* (learning strand), specifically:
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Understand and be able to use *Interrupt Events* to interact with a game.
+- Understand that *Event Listeners* can be used to check if an action has been performed.
+- Understand that *Event Handlers* can be used to perform an action detected by an *Event Listener*.
 * Mouse Events
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -134,36 +145,36 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- Add the print(event) statement to your code
+- Add the *print(event)* statement to your code:
 - [[./img/3-1.PNG]]
-- Run your code with =Shift-F10=, then move the mouse around inside the pyGame window and press some keys on the keyboard.
-- Look in the interpreter window, located in the bottom-left corner of the pyCharm window.
+- Run your code with *Shift-F10*, then move the mouse around inside the pyGame window and press some keys on the keyboard.
+- Look in the *shell/interpreter window*, located in the bottom section of the Thonny window or in the terminal window for Python IDLE.
 - You might see output like this:
 #+begin_src
 <Event(2-KeyDown {'mod': 0, 'unicode': '', 'scancode': 56, 'key': 308})>
 <Event(3-KeyUp {'mod': 0, 'key': 308, 'scancode': 56})>
 #+end_src
-- Try holding the CTRL, ALT or SHIFT keys while pushing other keys. The interpreter window output will now change slightly to show that the keys have been 'modified'. 
+- Try holding the CTRL, ALT or SHIFT keys while pushing other keys. The interpreter window output will now change slightly to show that the keys have been *modified*. 
 
 
-- *NOTE:* =KeyUp= and =KeyDown= are different events. What's the difference?
+- *NOTE:* *KeyUp* and *KeyDown* are different events. What's the difference?
 * Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-- *Silver:* Copy and paste lines from the Python console in the bottom-left corner which show the events returned for the following:
-   - Right mouse button clicked/released
-   - Mouse wheel clicked/released
-   - Mouse wheel spin up/down
-   - Left mouse button pressed/released
-   - Pressing the X to close the window
-   - Up arrow press
+- *Silver:* Copy and paste the lines from the Thonny/Python console in the bottom window which show the events returned for the following:
+   - Right mouse button clicked/released.
+   - Mouse wheel clicked/released.
+   - Mouse wheel spin up/down.
+   - Left mouse button pressed/released.
+   - Pressing the X to close the window.
+   - Up arrow press.
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- We will make a sprite called =player1= follow the mouse. Add these lines of code to your game loop.
-- *Note:* Make sure you use tab to double-indent the code so that it sits inside the =for= loop. 
+- We will make a sprite called *player1* follow the mouse. Add these lines of code to your game loop.
+- *Note:* Make sure you use tab to double-indent the code so that it sits inside the *for* loop. 
 #+begin_src python
 screen.fill(black)
 mousePosition = pygame.mouse.get_pos()
@@ -171,9 +182,9 @@ print(mousePosition)
 #+end_src
 - The code will look like this:
 [[./img/3-2.PNG]]
-- Look at the Python terminal window and move the mouse. 
-- This is the data we will use to position the =player1= sprite.
-- Modify your game loop to the following...
+- Look at the Thonny/Python terminal window and move the mouse. 
+- This is the data we will use to position the *player1* sprite.
+- Modify your game loop to the following:
 #+begin_src python
 screen.fill(black)
 mousePosition = pygame.mouse.get_pos()
@@ -184,7 +195,7 @@ player1 = pygame.draw.rect(screen, red, (player1X, player1Y, 40, 40))
 #+end_src
 - The code will look like this:
 [[./img/3-3.PNG]]
-- Run the program with =Shift-F10=. What happens?
+- Run the program with *Shift-F10*. What happens?
 - If you're struggling with the tasks, you can go through the notes above using this video tutorial:
 #+BEGIN_HTML
 <iframe width="650" height="393" src="https://www.youtube.com/embed/jkM4VFE98Vo" frameborder="0" allowfullscreen></iframe>
@@ -193,7 +204,7 @@ player1 = pygame.draw.rect(screen, red, (player1X, player1Y, 40, 40))
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- *Gold* The =player1= sprite isn't in the centre of the mouse pointer. Fix this bug and comment each line of your code to explain what it does.
+- *Gold* The *player1* sprite isn't in the centre of the mouse pointer. Fix this bug and comment each line of your code to explain what it does.
 - *Platinum:* You've now covered mouse movement. Modify your code so a different shape is drawn on left or right mouse button clicks.
 
 
