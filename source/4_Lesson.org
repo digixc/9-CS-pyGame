@@ -8,7 +8,7 @@
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
 
 #+TITLE: Pygame
-#+AUTHOR: Oliver Drayton
+#+AUTHOR: Stephen Fone
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
@@ -111,6 +111,17 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
+* Objectives
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: objectives
+:END:
+** Developing *Programming and Development* (learning strand), specifically:
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Understand the concept of *Keyboard Events* and how they can control the movement of an object in a game.
+- Understand and use variables to change to reflect/keep track of the state (/position, colour etc/) of a game object.
+- Understand and use *selection*, i.e. using *if-else, if-elif*, to branch the flow of an action.
 * Keyboard events
  :PROPERTIES:
  :HTML_CONTAINER_CLASS: activity
@@ -126,8 +137,8 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 - As we are making a game for the PC platform, the keyboard is a very important input tool.
-- We are going to control the moment of a player on the screen with the arrow keys. Add these lines of code inside the game loop, inside your =for= loop. 
-- Put the code immediately underneath the gameState = "exit" line.
+- We are going to control the moment of a player on the screen with the arrow keys. Add these lines of code inside the game loop, inside your *for* loop. 
+- Put the code immediately underneath the *# your code starts here* line.
 - *Note:* As always, you'll need to ensure the code is indented for it to work.
 #+begin_src python
     if event.type == pygame.KEYDOWN:
@@ -144,7 +155,7 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 - Let's now get the shape moving around on the screen when left/right keys are pressed. 
-- Our pseudocode for this will be...
+- Our pseudocode for this will be:
 #+begin_src
 Set up variables: XPos=100 and YPos=100 for the player's position.
 
@@ -164,15 +175,15 @@ END LOOP
 :HTML_CONTAINER_CLASS: try
 :END:
 - We'll start by adding our variables. 
-- Add these lines of code directly below the gameState="running" line.
+- Add these lines of code directly below the *gameState="running"* line.
 #+begin_src python
 player1XPos = 100
 player1YPos = 100
 #+end_src
 - The code will look like this:
 [[./img/4-1.png]]
-- We then create event listeners in the game loop. 
-- To do this, change the lines that say =print("left")= and =print("right")= to say...
+- We then create *Event Listeners* in the game loop. 
+- To do this, change the lines that say *print("left")* and *print("right")* to say:
 #+begin_src python
 if event.type == pygame.KEYDOWN:
     if event.key == pygame.K_LEFT:
@@ -183,9 +194,9 @@ if event.type == pygame.KEYDOWN:
 - Your code should look like this:
 [[./img/4-2.PNG]]
 - Run the program. You will find the player moves each time the key is pressed. 
-- This is good for some games but other times it is desirable to keep the player moving until another key is pressed (like in snake-type games). Currently the Event Listener and the Event Handler are in the same block of code.
-- We will separate the two out for continous movement
-- We will need 2 new variables outside of the game loop to hold the player's speed and direction. 
+- This is good for some games but other times it is desirable to keep the player moving until another key is pressed (/like in snake-type games/). Currently the *Event Listener* and the *Event Handler* are in the same block of code.
+- We will separate the two out for continous movement.
+- We will need two new variables outside of the game loop to hold the player's speed and direction. 
 - The pseudocode for our new movement program is:
 #+begin_src
 Set up variables:
@@ -244,7 +255,7 @@ while gameState != "exit":  # game loop - note: everything in the mainloop is in
 #+end_src
 - This will look like this:
 [[./img/4-4.png]]
-- Run the program with =Shift-F10=, and steer the square with the left/right cursor keys. 
+- Run the program with *Shift-F10*, and steer the square with the left/right cursor keys. 
 - What's different between this code and the previous version?
 - Comment the lines of code to explain what they do. 
 
@@ -256,9 +267,9 @@ while gameState != "exit":  # game loop - note: everything in the mainloop is in
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- *Silver:* Add the ability to move =player1= up and down *or* add comments to your code to explain how it works.
-- *Gold:* Add the functionality to increase and decrease =player1Speed= with the *Q* and *W* keys.
-- *Platinum*: Add a feature to make =player1= visible/invisible when the space bar is pressed, *or* stop the square from travelling beyond the edge of the window. 
+- *Silver:* Add the ability to move *player1* up and down *or* add comments to your code to explain how it works.
+- *Gold:* Add the functionality to increase and decrease *player1Speed* with the *Q* and *W* keys.
+- *Platinum*: Add a feature to make *player1* visible/invisible when the space bar is pressed, *or* stop the square from travelling beyond the edge of the window. 
 
 ** Badge It
 :PROPERTIES:

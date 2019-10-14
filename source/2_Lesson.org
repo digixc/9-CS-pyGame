@@ -7,7 +7,7 @@
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
 
 #+TITLE: Pygame
-#+AUTHOR: Oliver Drayton
+#+AUTHOR: Stephen Fone
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
@@ -140,11 +140,11 @@
 :END:
 - Previously, we looked at drawing simple elemental shapes. 
 - In this lesson, we are going to look at ways to draw shapes, then animate them.
-- We will will need to perform the following steps:
-  - Set up variables to store =x= and =y= coordinates for our graphic.
-  - Draw the a shape over at =player1X=, =player1Y=
-  - Change the variables a bit
-  - Repeat the draw/change process repeatedly.
+- *We will will need to perform the following steps:*
+  - *Setup variables* to store *x* and *y* coordinates for our graphic.
+  - *Draw* the a shape over at *player1X*, *player1Y*
+  - *Change* the variables a bit.
+  - *Repeat* the draw/change process repeatedly.
 - If you get stuck today, a walk-through of the steps described below can be seen here:
 #+BEGIN_HTML
 <iframe width="650" height="393" src="https://www.youtube.com/embed/TfdHz3yRTy8" frameborder="0" allowfullscreen></iframe>
@@ -153,7 +153,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- At the end of the 'game setup' area of the code, underneath the *gameState = running* line, create a variable =player1X= and assign it the value of 0.
+- At the end of the *game setup* area of the code, underneath the *gameState = running* line, create a variable *player1X* and *assign* it the *value of 0*.
 - This line of code will happen once when the program first starts up. 
 #+begin_src python
 player1X = 0
@@ -167,9 +167,9 @@ START REPEAT
     Add 4 to the value of player1X
 END REPEAT
 #+end_src
-- Add the following lines of code to draw our player in the game loop and increment the =X= position by 4 pixels every time the game loop runs.
-- Place the following lines of code immediately under the =#your code starts here= line. 
-- *NOTE:* You must ensure you use the =tab= key to indent these lines of code, otherwise it won't run.
+- Add the following lines of code to draw our player in the game loop and increment the *X* position by *4 pixels* /every time the game loop runs./
+- Place the following lines of code immediately under the *#your code starts here* line. 
+- *NOTE:* You must ensure you use the *tab* key to indent these lines of code, otherwise it won't run.
 #+begin_src python
 player1 = pygame.draw.rect(screen, green, (player1X, 200, 20, 20))
 player1X = player1X + 4
@@ -180,12 +180,12 @@ player1X = player1X + 4
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: document
 :END:
-- Did this work as expected? Discuss what you think has happened.
+- Did this work as expected? Discuss what you think has happened?
 ** Try It:
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- Perhaps this line can help - it fills the whole screen with solid colour, which would cover any previous images we've drawn. 
+- Perhaps this line can help - It fills the whole screen with solid colour, which would cover any previous images we've drawn. 
 #+begin_src python
 screen.fill(black)
 #+end_src
@@ -204,13 +204,13 @@ screen.fill(black)
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- *Selection* is one of the three basic logic structures in computer programming. The other two logic structures are *sequence* and *iteration*
-- In a selection structure, a question is asked, and depending on the answer, the program takes certain courses of action, after which the program moves on to the next event
-- Humans might see selection like this
+- *Selection* is one of the *three basic logic structures* in computer programming. The other two logic structures are *sequence* and *iteration*
+- *In a selection structure*, a question is asked, and depending on the answer, the program takes certain courses of action, after which the program moves on to the next event
+- Humans might see selection like this:
 [[./img/2-4.png]]
-- Computers see things like this...
+- Computers see things like this:
 [[./img/2-5.png]]
-- We are going to use value of the =player1X= variable to determine if =player1= has moved off the screen. This translates into python code as * if* statement.
+- We are going to use value of the *player1X* variable to determine if *player1* has moved off the screen. This translates into python code as *if* statement.
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
@@ -235,9 +235,9 @@ if player1X > SCREENWIDTH:
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- Using conditionals (IF statements) will allow us to make far better graphics. 
+- *Using conditionals* (/IF statements/) will allow us to make far better graphics. 
 - For instance instead of making the player reappear repeatedly on the same edge, lets make him bounce from edge to edge.
-- We will need to create a variable to hold the speed and direction of the player – this must be done before at the loop, in the 'game setup' section of the page at the top of the program. Put it directly underneath where you initially wrote the *player1X = 0* line at the start of this page. You should end up with...
+- We will need to *create a variable* to hold the *speed* and *direction* of the player – this must be done before at the loop, in the *game setup* section of the page at the top of the program. Put it directly underneath where you initially wrote the *player1X = 0* line at the start of this page. You should end up with:
 
 #+begin_src python
 player1X = 0

@@ -139,15 +139,15 @@ for the JavaScript code in this tag.
 </li>
 <li>In this lesson, we are going to look at ways to draw shapes, then animate them.
 </li>
-<li>We will will need to perform the following steps:
+<li><b>We will will need to perform the following steps:</b>
 <ul class="org-ul">
-<li>Set up variables to store <code>x</code> and <code>y</code> coordinates for our graphic.
+<li><b>Setup variables</b> to store <b>x</b> and <b>y</b> coordinates for our graphic.
 </li>
-<li>Draw the a shape over at <code>player1X</code>, <code>player1Y</code>
+<li><b>Draw</b> the a shape over at <b>player1X</b>, <b>player1Y</b>
 </li>
-<li>Change the variables a bit
+<li><b>Change</b> the variables a bit.
 </li>
-<li>Repeat the draw/change process repeatedly.
+<li><b>Repeat</b> the draw/change process repeatedly.
 </li>
 </ul>
 </li>
@@ -161,14 +161,15 @@ for the JavaScript code in this tag.
 <h3 id="sec-2-3">Try It</h3>
 <div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
-<li>At the end of the 'game setup' area of the code, underneath the <b>gameState = running</b> line, create a variable <code>player1X</code> and assign it the value of 0.
+<li>At the end of the <b>game setup</b> area of the code, underneath the <b>gameState = running</b> line, create a variable <b>player1X</b> and <b>assign</b> it the <b>value of 0</b>.
 </li>
 <li>This line of code will happen once when the program first starts up. 
 </li>
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python">player1X = 0
+<pre class="src src-python"><span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1X</span> = <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
@@ -191,17 +192,18 @@ START REPEAT
 END REPEAT
 </pre>
 <ul class="org-ul">
-<li>Add the following lines of code to draw our player in the game loop and increment the <code>X</code> position by 4 pixels every time the game loop runs.
+<li>Add the following lines of code to draw our player in the game loop and increment the <b>X</b> position by <b>4 pixels</b> <i>every time the game loop runs.</i>
 </li>
-<li>Place the following lines of code immediately under the <code>#your code starts here</code> line. 
+<li>Place the following lines of code immediately under the <b>#your code starts here</b> line. 
 </li>
-<li><b>NOTE:</b> You must ensure you use the <code>tab</code> key to indent these lines of code, otherwise it won't run.
+<li><b>NOTE:</b> You must ensure you use the <b>tab</b> key to indent these lines of code, otherwise it won't run.
 </li>
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python">player1 = pygame.draw.rect(screen, green, (player1X, 200, 20, 20))
-player1X = player1X + 4
+<pre class="src src-python"><span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1</span> = pygame.draw.rect(screen, green, (player1X, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">200</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">20</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">20</span>))
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1X</span> = player1X + <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">4</span>
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
@@ -219,7 +221,7 @@ player1X = player1X + 4
 <h3 id="sec-2-4">Document It</h3>
 <div class="outline-text-3" id="text-2-4">
 <ul class="org-ul">
-<li>Did this work as expected? Discuss what you think has happened.
+<li>Did this work as expected? Discuss what you think has happened?
 </li>
 </ul>
 </div>
@@ -228,12 +230,13 @@ player1X = player1X + 4
 <h3 id="sec-2-5">Try It:</h3>
 <div class="outline-text-3" id="text-2-5">
 <ul class="org-ul">
-<li>Perhaps this line can help - it fills the whole screen with solid colour, which would cover any previous images we've drawn. 
+<li>Perhaps this line can help - It fills the whole screen with solid colour, which would cover any previous images we've drawn. 
 </li>
 </ul>
 <div class="org-src-container">
 
 <pre class="src src-python">screen.fill(black)
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
@@ -263,11 +266,11 @@ player1X = player1X + 4
 <h3 id="sec-3-1">Learn It</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
-<li><b>Selection</b> is one of the three basic logic structures in computer programming. The other two logic structures are <b>sequence</b> and <b>iteration</b>
+<li><b>Selection</b> is one of the <b>three basic logic structures</b> in computer programming. The other two logic structures are <b>sequence</b> and <b>iteration</b>
 </li>
-<li>In a selection structure, a question is asked, and depending on the answer, the program takes certain courses of action, after which the program moves on to the next event
+<li><b>In a selection structure</b>, a question is asked, and depending on the answer, the program takes certain courses of action, after which the program moves on to the next event
 </li>
-<li>Humans might see selection like this
+<li>Humans might see selection like this:
 </li>
 </ul>
 
@@ -276,7 +279,7 @@ player1X = player1X + 4
 </p>
 </div>
 <ul class="org-ul">
-<li>Computers see things like this&#x2026;
+<li>Computers see things like this:
 </li>
 </ul>
 
@@ -285,7 +288,7 @@ player1X = player1X + 4
 </p>
 </div>
 <ul class="org-ul">
-<li>We are going to use value of the <code>player1X</code> variable to determine if <code>player1</code> has moved off the screen. This translates into python code as * if* statement.
+<li>We are going to use value of the <b>player1X</b> variable to determine if <b>player1</b> has moved off the screen. This translates into python code as <b>if</b> statement.
 </li>
 </ul>
 </div>
@@ -300,13 +303,14 @@ player1X = player1X + 4
 <div class="org-src-container">
 
 <pre class="src src-python">screen.fill(black)
-player1 = pygame.draw.rect(screen, green, (player1X, 200, 20, 20))
-player1X = player1X + 4
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1</span> = pygame.draw.rect(screen, green, (player1X, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">200</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">20</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">20</span>))
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1X</span> = player1X + <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">4</span>
 
-# selection: depending on the outcome of this comparison, 
-# player1X will be set to 0 or not
-if player1X &gt; SCREENWIDTH:
-    player1X = 0
+<span style="color: #b22222;"># </span><span style="color: #b22222;">selection: depending on the outcome of this comparison, </span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">player1X will be set to 0 or not</span>
+<span style="color: #a020f0;">if</span> player1X &gt; SCREENWIDTH:
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1X</span> = <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
@@ -332,18 +336,19 @@ if player1X &gt; SCREENWIDTH:
 <h3 id="sec-3-3">Code It</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
-<li>Using conditionals (IF statements) will allow us to make far better graphics. 
+<li><b>Using conditionals</b> (<i>IF statements</i>) will allow us to make far better graphics. 
 </li>
 <li>For instance instead of making the player reappear repeatedly on the same edge, lets make him bounce from edge to edge.
 </li>
-<li>We will need to create a variable to hold the speed and direction of the player – this must be done before at the loop, in the 'game setup' section of the page at the top of the program. Put it directly underneath where you initially wrote the <b>player1X = 0</b> line at the start of this page. You should end up with&#x2026;
+<li>We will need to <b>create a variable</b> to hold the <b>speed</b> and <b>direction</b> of the player – this must be done before at the loop, in the <b>game setup</b> section of the page at the top of the program. Put it directly underneath where you initially wrote the <b>player1X = 0</b> line at the start of this page. You should end up with:
 </li>
 </ul>
 
 <div class="org-src-container">
 
-<pre class="src src-python">player1X = 0
-player1XSpeed = 4
+<pre class="src src-python"><span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1X</span> = <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1XSpeed</span> = <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">4</span>
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
@@ -363,11 +368,12 @@ player1XSpeed = 4
 <div class="org-src-container">
 
 <pre class="src src-python">screen.fill(black)
-player1 = pygame.draw.rect(screen, green, (player1X, 200, 20, 20))
-player1X = player1X + 4
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1</span> = pygame.draw.rect(screen, green, (player1X, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">200</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">20</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">20</span>))
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1X</span> = player1X + <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">4</span>
 
-if player1X &gt; SCREENWIDTH:
-    player1X = 0
+<span style="color: #a020f0;">if</span> player1X &gt; SCREENWIDTH:
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1X</span> = <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>
+</pre>
 </pre>
 </div>
 
@@ -378,11 +384,12 @@ if player1X &gt; SCREENWIDTH:
 <div class="org-src-container">
 
 <pre class="src src-python">screen.fill(black)
-player1 = pygame.draw.rect(screen, green, (player1X, 200, 20, 20))
-player1X = player1X + player1XSpeed
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1</span> = pygame.draw.rect(screen, green, (player1X, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">200</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">20</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">20</span>))
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1X</span> = player1X + player1XSpeed
 
-if player1X &gt; SCREENWIDTH:
-    player1XSpeed  = player1XSpeed * -1
+<span style="color: #a020f0;">if</span> player1X &gt; SCREENWIDTH:
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1XSpeed</span>  = player1XSpeed * -<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">1</span>
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
@@ -448,7 +455,7 @@ if player1X &gt; SCREENWIDTH:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="validation"></p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
