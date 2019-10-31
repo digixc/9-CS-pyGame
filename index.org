@@ -55,7 +55,7 @@
 :HTML_CONTAINER_CLASS: link-heading
 :END:      
 
-* [[file:pages/evaluation.html][End of Unit Self Evaluation]]
+* [[file:pages/assessment.html][End of Unit Self Evaluation]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
