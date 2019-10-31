@@ -96,36 +96,60 @@ for the JavaScript code in this tag.
 <p onclick="underlayon('hsla(300,100%,25%,0.3)')">Purple</p>
 <p onclick="underlayon('hsla(60,100%,50%,0.3)')">Yellow</p>
 </div>
-<div id="outline-container-sec-1" class="outline-2 activity">
-<h2 id="sec-1">Stage fright</h2>
+<div id="outline-container-sec-1" class="outline-2 objectives">
+<h2 id="sec-1">Objectives</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-sec-1-1" class="outline-3 save">
-<h3 id="sec-1-1">Save It</h3>
+<div id="outline-container-sec-1-1" class="outline-3 learn">
+<h3 id="sec-1-1">Developing <b>Programming and Development</b> (learning strand), specifically:</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
-<li>Download and save the <a href="./doc/pygame_StagesTemplate.py">Stages Template</a>. Please note this is a different template to all previous lessons.
+<li>Understand and use Sprites, images and sound files for our game objects.
 </li>
-<li>You'll also need some assets for your game&#x2026;
+<li>Understand and use variables to change to keep track of the X and Y coordinates of a sprite/image.
 </li>
-<li>Download this <a href="./doc/Laser_Cannon.ogg">sound file</a> and save it to your Images folder
+<li>Understand the process of painting the screen with image(s) known as Bit Blitting or Blit.
 </li>
-<li>Download this <a href="./img/Bourne_Town_Hall.jpg">background image</a> and save it to your Images folder
+<li>Understand that Event Handlers can be used to perform an action detected by an Event Listener.
 </li>
-<li>Download this <a href="./img/b1.png">sprite file</a> and alo save it to your Images folder
+<li>Understand and use of outputting text to the screen.
+</li>
+<li>Understand and use <b>selection</b>, i.e. using <b>if-else, if-elif</b>, to branch the flow of an action.
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-2" class="outline-3 learn">
-<h3 id="sec-1-2">Learn It</h3>
-<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2">Stage fright</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 save">
+<h3 id="sec-2-1">Save It</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Download and save the <a href="./doc/pygame_StagesTemplate.py">Stages Template</a>. Please note this is a different template to all previous lessons.
+</li>
+<li>You'll also need some assets for your game:
+</li>
+<li>Download this <a href="./doc/Laser_Cannon.ogg">sound file</a> and save it to your Images folder.
+</li>
+<li>Download this <a href="./img/Bourne_Town_Hall.jpg">background image</a> and save it to your Images folder.
+</li>
+<li>Download this <a href="./img/b1.png">sprite file</a> and alo save it to your Images folder.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3 learn">
+<h3 id="sec-2-2">Learn It</h3>
+<div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>In order for your game to look like a real game we’ll need to have several states for it to exist in.
 </li>
-<li>The game will have 3 states - splash, playing and game over.
+<li>The game will have <b>3 states</b> - <i>splash, playing and game over</i>.
 </li>
-<li>Splash:
+<li><b>Splash:</b>
 <ul class="org-ul">
 <li>Opening image
 </li>
@@ -140,14 +164,14 @@ for the JavaScript code in this tag.
 </ul>
 </li>
 
-<li>Playing:
+<li><b>Playing:</b>
 <ul class="org-ul">
 <li>The actual game we’ve been creating
 </li>
 </ul>
 </li>
 
-<li>Game Over:
+<li><b>Game Over:</b>
 <ul class="org-ul">
 <li>Displays players results e.g. score / average distance from target
 </li>
@@ -158,9 +182,9 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-3" class="outline-3 build">
-<h3 id="sec-1-3">Build It - Setup</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-sec-2-3" class="outline-3 build">
+<h3 id="sec-2-3">Build It - Setup</h3>
+<div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
 <li>Before the game loop begins we need to setup the font, images and sounds.
 </li>
@@ -179,28 +203,29 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"># loads font, images and sounds
-fontName = pygame.font.match_font('arial')
-BGImage = pygame.image.load("Images/Bourne_Town_Hall.jpg")
-player1Image = pygame.image.load("Images/crossHair.png")
-targetImage = pygame.image.load("Images/b1.png")
-gunSound = pygame.mixer.Sound("Images/Laser_Cannon.ogg")
+<pre class="src src-python"><span style="color: #b22222;"># </span><span style="color: #b22222;">loads font, images and sounds</span>
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">fontName</span> = pygame.font.match_font(<span style="color: #8b2252;">'arial'</span>)
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">BGImage</span> = pygame.image.load(<span style="color: #8b2252;">"Images/Bourne_Town_Hall.jpg"</span>)
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1Image</span> = pygame.image.load(<span style="color: #8b2252;">"Images/crossHair.png"</span>)
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">targetImage</span> = pygame.image.load(<span style="color: #8b2252;">"Images/b1.png"</span>)
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">gunSound</span> = pygame.mixer.Sound(<span style="color: #8b2252;">"Images/Laser_Cannon.ogg"</span>)
 
-# resize images
-player1ImageWidthHeight = [100, 97]  # set size for player sprite
-player1Image = pygame.transform.scale(player1Image, player1ImageWidthHeight)  # modifies size of image
-targetImageWidthHeight = [41, 50]
-targetImage = pygame.transform.scale(targetImage, targetImageWidthHeight)
+<span style="color: #b22222;"># </span><span style="color: #b22222;">resize images</span>
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1ImageWidthHeight</span> = [<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">100</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">97</span>]  <span style="color: #b22222;"># set size for player sprite</span>
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1Image</span> = pygame.transform.scale(player1Image, player1ImageWidthHeight)  <span style="color: #b22222;"># modifies size of image</span>
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">targetImageWidthHeight</span> = [<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">41</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">50</span>]
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">targetImage</span> = pygame.transform.scale(targetImage, targetImageWidthHeight)
 
-targetXY = [500, 500]  # sets target start position
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">targetXY</span> = [<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">500</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">500</span>]  <span style="color: #b22222;"># sets target start position</span>
+</pre>
 </pre>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-sec-2" class="outline-2 build">
-<h2 id="sec-2">Build It - Splash</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-sec-3" class="outline-2 build">
+<h2 id="sec-3">Build It - Splash</h2>
+<div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>Next we will add the game specific variables to the splash stage so they can be reset at the beginning of each new game. 
 </li>
@@ -215,18 +240,19 @@ targetXY = [500, 500]  # sets target start position
 
 <div class="org-src-container">
 
-<pre class="src src-python"># set start game variables
-startTime = pygame.time.get_ticks()
-fireLock = 0
-score = 0
-hitList = []
-distanceList = []
+<pre class="src src-python"><span style="color: #b22222;"># </span><span style="color: #b22222;">set start game variables</span>
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">startTime</span> = pygame.time.get_ticks()
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">fireLock</span> = <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">score</span> = <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">hitList</span> = []
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">distanceList</span> = []
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
-<li>The hitList is used to score the X and Y coordinates of each successful hit on the target.
+<li>The <b>hitList</b> is used to score the X and Y coordinates of each successful hit on the target.
 </li>
-<li>The distanceList is used to store the distance from the centre of the target for each successful hit.
+<li>The <b>distanceList</b> is used to store the distance from the centre of the target for each successful hit.
 </li>
 <li>Both of these are used in the game over state to inform the user of their performance.
 </li>
@@ -234,9 +260,9 @@ distanceList = []
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2 build">
-<h2 id="sec-3">Build It - Playing</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-sec-4" class="outline-2 build">
+<h2 id="sec-4">Build It - Playing</h2>
+<div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>The playing state contains the game code we have written.
 </li>
@@ -248,31 +274,32 @@ distanceList = []
 </div>
 <div class="org-src-container">
 
-<pre class="src src-python">pygame.mouse.set_visible(False)  # hide mouse cursor
-	screen.blit(BGImage, (0, 0))  # draw background image
-	mousePosition = pygame.mouse.get_pos()
-	target = screen.blit(targetImage, targetXY)
-	player1XY = mousePosition[0] - player1ImageWidthHeight[0] / 2, mousePosition[1] - player1ImageWidthHeight[1] / 2
-	player1 = screen.blit(player1Image, player1XY)
-	distance = pythag(player1XY[0], player1XY[1], targetXY[0], targetXY[1])
+<pre class="src src-python">pygame.mouse.set_visible(<span style="color: #a020f0;">False</span>)  <span style="color: #b22222;"># hide mouse cursor</span>
+    screen.blit(BGImage, (<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>))  <span style="color: #b22222;"># draw background image</span>
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">mousePosition</span> = pygame.mouse.get_pos()
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">target</span> = screen.blit(targetImage, targetXY)
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1XY</span> = mousePosition[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>] - player1ImageWidthHeight[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>] / <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">2</span>, mousePosition[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">1</span>] - player1ImageWidthHeight[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">1</span>] / <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">2</span>
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">player1</span> = screen.blit(player1Image, player1XY)
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">distance</span> = pythag(player1XY[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>], player1XY[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">1</span>], targetXY[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>], targetXY[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">1</span>])
 
-	if pygame.mouse.get_pressed()[0] == 1 and fireLock == 0:  # player fires
-	    gunSound.play()
-	    fireLock = 1
-	    if player1.colliderect(target):  # when the target is hit
-		targetXY[0] = random.randint(0, SCREENWIDTH - 50)  # new target X
-		targetXY[1] = random.randint(0, SCREENHEIGHT - 50)  # new target Y
-		score += 1  # add to score
-		hitList.append([int(player1XY[0]), int(player1XY[1])])
-		distanceList.append(distance)
+    <span style="color: #a020f0;">if</span> pygame.mouse.get_pressed()[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>] == <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">1</span> <span style="color: #a020f0;">and</span> <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">fireLock</span> == <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>:  <span style="color: #b22222;"># player fires</span>
+        gunSound.play()
+        <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">fireLock</span> = <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">1</span>
+        <span style="color: #a020f0;">if</span> player1.colliderect(target):  <span style="color: #b22222;"># when the target is hit</span>
+        <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">targetXY</span>[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>] = random.randint(<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>, SCREENWIDTH - <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">50</span>)  <span style="color: #b22222;"># new target X</span>
+        <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">targetXY</span>[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">1</span>] = random.randint(<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>, SCREENHEIGHT - <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">50</span>)  <span style="color: #b22222;"># new target Y</span>
+        <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">score</span> += <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">1</span>  <span style="color: #b22222;"># add to score</span>
+        hitList.append([<span style="color: #483d8b;">int</span>(player1XY[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>]), <span style="color: #483d8b;">int</span>(player1XY[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">1</span>])])
+        distanceList.append(distance)
 
-	# draw text to screen
-	textDraw("distance: " + str(int(distance)), (SCREENWIDTH / 2 - 100, 10), black)
-	textDraw("Score: " + str(score), (SCREENWIDTH / 2 - 100, 40), black)
-	textDraw("Time: " + str( pygame.time.get_ticks() - startTime), (SCREENWIDTH / 2 - 100, 70), black)
+    <span style="color: #b22222;"># draw text to screen</span>
+    textDraw(<span style="color: #8b2252;">"distance: "</span> + <span style="color: #483d8b;">str</span>(int(distance)), (SCREENWIDTH / <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">2</span> - <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">100</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">10</span>), black)
+    textDraw(<span style="color: #8b2252;">"Score: "</span> + <span style="color: #483d8b;">str</span>(score), (SCREENWIDTH / <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">2</span> - <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">100</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">40</span>), black)
+    textDraw(<span style="color: #8b2252;">"Time: "</span> + <span style="color: #483d8b;">str</span>( pygame.time.get_ticks() - startTime), (SCREENWIDTH / <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">2</span> - <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">100</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">70</span>), black)
 
-	if pygame.time.get_ticks() - startTime &gt; 10000:  # end game after 10 seconds
-	    gameState = "gameOver"
+    <span style="color: #a020f0;">if</span> pygame.time.get_ticks() - startTime &gt; <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">10000</span>:  <span style="color: #b22222;"># end game after 10 seconds</span>
+        <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">gameState</span> = <span style="color: #8b2252;">"gameOver"</span>
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
@@ -282,9 +309,9 @@ distanceList = []
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2 build">
-<h2 id="sec-4">Build It - Game Over</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-sec-5" class="outline-2 build">
+<h2 id="sec-5">Build It - Game Over</h2>
+<div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>The game over state displays the players score, average distance of each hit.  The location of each hit and its distance are drawn to the screen.
 </li>
@@ -297,16 +324,17 @@ distanceList = []
 <div class="org-src-container">
 
 <pre class="src src-python">screen.fill(black)
-pygame.mouse.set_visible(True)
-for h in range(0, len(hitList) - 1):  # for each hit....
-    pygame.draw.circle(screen, red, hitList[h], 30)
-    textDraw(str(int(distanceList[h])), (hitList[h][0] + 20, hitList[h][1] + 20), red)
-    textDraw("Score: " + str(score), (10, 40), green)
-    avDistance = sum(distanceList) / len(distanceList)
-    textDraw("Average distance: " + str(int(avDistance)), (10, 100), green)
-textDraw("Right click to play again", (400, 400), green)
-if pygame.mouse.get_pressed()[2]:
-    gameState = "splash"
+pygame.mouse.set_visible(<span style="color: #a020f0;">True</span>)
+<span style="color: #a020f0;">for</span> h <span style="color: #a020f0;">in</span> <span style="color: #483d8b;">range</span>(<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>, <span style="color: #483d8b;">len</span>(hitList) - <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">1</span>):  <span style="color: #b22222;"># for each hit....</span>
+    pygame.draw.circle(screen, red, hitList[h], <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">30</span>)
+    textDraw(str(int(distanceList[h])), (hitList[h][<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">0</span>] + <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">20</span>, hitList[h][<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">1</span>] + <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">20</span>), red)
+    textDraw(<span style="color: #8b2252;">"Score: "</span> + <span style="color: #483d8b;">str</span>(score), (<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">10</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">40</span>), green)
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">avDistance</span> = <span style="color: #483d8b;">sum</span>(distanceList) / <span style="color: #483d8b;">len</span>(distanceList)
+    textDraw(<span style="color: #8b2252;">"Average distance: "</span> + <span style="color: #483d8b;">str</span>(int(avDistance)), (<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">10</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">100</span>), green)
+textDraw(<span style="color: #8b2252;">"Right click to play again"</span>, (<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">400</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">400</span>), green)
+<span style="color: #a020f0;">if</span> pygame.mouse.get_pressed()[<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">2</span>]:
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">gameState</span> = <span style="color: #8b2252;">"splash"</span>
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
@@ -314,9 +342,9 @@ if pygame.mouse.get_pressed()[2]:
 </li>
 </ul>
 </div>
-<div id="outline-container-sec-4-1" class="outline-3 test">
-<h3 id="sec-4-1">Test It</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-sec-5-1" class="outline-3 test">
+<h3 id="sec-5-1">Test It</h3>
+<div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li>Try running your program.
 </li>
@@ -334,15 +362,15 @@ if pygame.mouse.get_pressed()[2]:
 <iframe width="650" height="393" src="https://www.youtube.com/embed/xg9UIrildXI" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
-<div id="outline-container-sec-4-2" class="outline-3 badge">
-<h3 id="sec-4-2">Badge It</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-sec-5-2" class="outline-3 badge">
+<h3 id="sec-5-2">Badge It</h3>
+<div class="outline-text-3" id="text-5-2">
 <ul class="org-ul">
-<li><b>Silver:</b> The code uses something called a list to store the players moves. Read the first half of <a href="https://bournetocode.com/projects/8-CS-TextGames/pages/3_2015Lesson.html">these</a> online notes about lists, then write a short piece in a text file (e.g. using Notepad) to explain what a list is.
+<li><b>Silver:</b> The code uses something called a <b>list</b> to store the players moves. Read the first half of <a href="https://bournetocode.com/projects/8-CS-TextGames/pages/3_2015Lesson.html">these</a> online notes about lists, then write a short piece in a text file (<i>e.g. using Notepad</i>) to explain what a list is.
 </li>
-<li><b>Gold:</b> Add a background image and some additional text to the splash. screen section of the code, and upload a screenshot of the new splash screen to collect the badge.
+<li><b>Gold:</b> Add a background image and some additional text to the splash screen section of the code, and upload a screenshot of the new splash screen to collect the badge.
 </li>
-<li><b>Platinum:</b> Modify the game to use are own sprites, backgrounds and sounds, by looking around online. Upload screenshots of your revised game, and the .py file and your new assets to collect the badge. 
+<li><b>Platinum:</b> Modify the game to use your own sprites, backgrounds and sounds, by looking around online. Upload screenshots of your revised game, and the .py file and your new assets to collect the badge. 
 </li>
 </ul>
 </div>
@@ -350,7 +378,7 @@ if pygame.mouse.get_pressed()[2]:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="validation"></p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

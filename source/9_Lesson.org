@@ -7,7 +7,7 @@
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
 
 #+TITLE: Pygame
-#+AUTHOR: Oliver Drayton
+#+AUTHOR: Stephen Fone
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
@@ -111,6 +111,20 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
+* Objectives
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: objectives
+:END:
+** Developing *Programming and Development* (learning strand), specifically:
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Understand and use Sprites, images and sound files for our game objects.
+- Understand and use variables to change to keep track of the X and Y coordinates of a sprite/image.
+- Understand the process of painting the screen with image(s) known as Bit Blitting or Blit.
+- Understand that Event Handlers can be used to perform an action detected by an Event Listener.
+- Understand and use of outputting text to the screen.
+- Understand and use *selection*, i.e. using *if-else, if-elif*, to branch the flow of an action.
 * Stage fright
  :PROPERTIES:
  :HTML_CONTAINER_CLASS: activity
@@ -121,27 +135,27 @@ SCHEDULED: <2016-05-08 Sun>
 :HTML_CONTAINER_CLASS: save
 :END:
 - Download and save the [[./doc/pygame_StagesTemplate.py][Stages Template]]. Please note this is a different template to all previous lessons.
-- You'll also need some assets for your game...
-- Download this [[./doc/Laser_Cannon.ogg][sound file]] and save it to your Images folder
-- Download this [[./img/Bourne_Town_Hall.jpg][background image]] and save it to your Images folder
-- Download this [[./img/b1.png][sprite file]] and alo save it to your Images folder
+- You'll also need some assets for your game:
+- Download this [[./doc/Laser_Cannon.ogg][sound file]] and save it to your Images folder.
+- Download this [[./img/Bourne_Town_Hall.jpg][background image]] and save it to your Images folder.
+- Download this [[./img/b1.png][sprite file]] and alo save it to your Images folder.
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
 - In order for your game to look like a real game we’ll need to have several states for it to exist in.
-- The game will have 3 states - splash, playing and game over.
-- Splash:
+- The game will have *3 states* - /splash, playing and game over/.
+- *Splash:*
   - Opening image
   - Title
   - Instructions
   - Reset game specific variables e.g. score
   - Capture start time – for the timer
 
-- Playing:
+- *Playing:*
   - The actual game we’ve been creating
 
-- Game Over:
+- *Game Over:*
   - Displays players results e.g. score / average distance from target
   - Option to restart game
 ** Build It - Setup
@@ -186,8 +200,8 @@ targetXY = [500, 500]  # sets target start position
             hitList = []
             distanceList = []
 #+end_src
-- The hitList is used to score the X and Y coordinates of each successful hit on the target.
-- The distanceList is used to store the distance from the centre of the target for each successful hit.
+- The *hitList* is used to score the X and Y coordinates of each successful hit on the target.
+- The *distanceList* is used to store the distance from the centre of the target for each successful hit.
 - Both of these are used in the game over state to inform the user of their performance.
 
 * Build It - Playing
@@ -261,6 +275,6 @@ pygame.mouse.set_visible(False)  # hide mouse cursor
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:      
-- *Silver:* The code uses something called a list to store the players moves. Read the first half of [[https://bournetocode.com/projects/8-CS-TextGames/pages/3_2015Lesson.html][these]] online notes about lists, then write a short piece in a text file (e.g. using Notepad) to explain what a list is.
-- *Gold:* Add a background image and some additional text to the splash. screen section of the code, and upload a screenshot of the new splash screen to collect the badge.
-- *Platinum:* Modify the game to use are own sprites, backgrounds and sounds, by looking around online. Upload screenshots of your revised game, and the .py file and your new assets to collect the badge. 
+- *Silver:* The code uses something called a *list* to store the players moves. Read the first half of [[https://bournetocode.com/projects/8-CS-TextGames/pages/3_2015Lesson.html][these]] online notes about lists, then write a short piece in a text file (/e.g. using Notepad/) to explain what a list is.
+- *Gold:* Add a background image and some additional text to the splash screen section of the code, and upload a screenshot of the new splash screen to collect the badge.
+- *Platinum:* Modify the game to use your own sprites, backgrounds and sounds, by looking around online. Upload screenshots of your revised game, and the .py file and your new assets to collect the badge. 

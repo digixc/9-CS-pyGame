@@ -7,7 +7,7 @@
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
 
 #+TITLE: Pygame
-#+AUTHOR: Oliver Drayton
+#+AUTHOR: Stephen Fone
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
@@ -111,6 +111,18 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
+* Objectives
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: objectives
+:END:
+** Developing *Programming and Development* (learning strand), specifically:
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Understand the concept of Sprites and how they can used as game objects.
+- Understand and use variables to change to keep track of the X and Y coordinates of a sprite.
+- Understand the process of painting the screen with image(s) known as Bit Blitting or Blit.
+- Understand that Event Handlers can be used to perform an action detected by an Event Listener.
 * Pythagoras
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -119,7 +131,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: design
 :END:
-- Now we've learnt some individual coding techniques, we can try and bring them together to create a nice target shooting game like this:
+- Now that we've learnt some cool coding techniques, we can try and bring them all together to create a nice target shooting game like this:
 #+BEGIN_HTML
 <iframe width="420" height="315" src="https://www.youtube.com/embed/G7T_j9nAHBs" frameborder="0" allowfullscreen></iframe>
 #+END_HTML
@@ -127,7 +139,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- Pythagoras invented his theorem in ancient Greek times so we could make video games.
+- *Pythagoras* invented his theorem in ancient Greek times so we could make video games.
 - You may remember this from your maths classes:
 [[./img/8-1.png]]
 - Given the lengths of a and b we are able to calculate the length of c using the equation above.
@@ -135,18 +147,18 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- Start by picking up the template for this lesson:
+- Start by downloading the template for this lesson:
 - [[./doc/pygameDevTemplate.py][Right click and Save As - for a fresh template]]
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
 - First we'll need some graphics for our game. At the very least, we'll need to load a player and target image.
-- Save the two images below into your pyGame folder on your H: drive.
-- To keep things neat, make a sub-folder in your pyGame folder and call it =img=. Put both images in there. *NOTE:* If you don't place them into the sub-folder, the code examples used in this lesson won't work.
+- *Save the two images* below into your *pyGame folder* on your H: drive.
+- To keep things neat, *make a sub-folder* in your pyGame folder and call it *img*. Put both images in there. *NOTE:* If you don't place them into the sub-folder, the code examples used in this lesson won't work.
 [[./img/bird1.png]]
 [[./img/crossHair.png]] 
-- We'll start off by establishing the target's starting =X= and =Y= position on the screen. Add these lines just before your game loop, around line 18:
+- We'll start off by establishing the target's starting *X* and *Y* position on the screen. Add these lines just before your game loop, around line 18:
 #+begin_src python 
 gameState = "running"  # controls which state the games is in
 player1Image = pygame.image.load("img/crossHair.png")
@@ -156,8 +168,8 @@ targetY = 100
 #+end_src
 - It should look like this:
 [[./img/8-2.png]]
-- Using the ideas used in the Mouse lesson, we'll have the target graphic follow the mouse cursor. Add these lines into your game loop, around line 30:
-- *NOTE:* This code must be indented in order to work.
+- Using the ideas used in lesson 3 mouse events, we'll have the target graphic follow the mouse cursor around the screen. Add the following lines into your game loop, around line 30.
+- *NOTE:* This code must be indented in order to work:
 #+begin_src python 
 screen.fill(white)
 mousePos = pygame.mouse.get_pos()
@@ -172,7 +184,7 @@ player1 = screen.blit(player1Image, (player1X, player1Y))
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- In our game, we'll need to know when the player has 'hit' the target bird. 
+- In our game, we'll need to know when the *player* has 'hit' the *target bird*. 
 - We'll draw an imaginary circle around the bird's X, Y coordinates and say that when the player clicks the mouse, if the mouse is inside the circle, they've hit the target. 
 - We could also use the idea of how close the player is to the middle to decide their accuracy.
 - You've almost certianly covered Pythagoras' theorem in maths, but how does it help us solve this problem?
@@ -182,9 +194,9 @@ player1 = screen.blit(player1Image, (player1X, player1Y))
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- In order to keep the game loop as tidy as possible we will create a function to calculate =c=. 
-- The function will need to use the math module's square root method. This isn't built into Python by default, so some extra code in the form of the =math= module must be imported. 
-- Add these lines to the top of your program, around line 4
+- In order to keep the game loop as tidy as possible we will create a function to calculate *c*. 
+- The function will need to use the math module's square root method. This isn't built into Python by default, so some extra code in the form of the *math* module must be imported. 
+- Add the following lines to the top of your program, around line 4:
 #+begin_src python 
 import math
 
@@ -195,13 +207,13 @@ def pythag(pX, pY, tX, tY):
     print (c)
 #+end_src
 [[./img/8-5.png]]
-- Finally, we must call the function and send it the player's and target's =X= and =Y= positions to perform the calculation with. Add this code inside the game loop, near line 44.
-- *NOTE:* This code must also be indented in order to work.
+- Finally, we must call the function and send it the player's and target's *X* and *Y* positions to perform the calculation with. Add this code inside the game loop, near line 44.
+- *NOTE:* This code must also be indented in order to work:
 #+begin_src python 
 pythag(player1X, player1Y, targetX, targetY)
 #+end_src
 [[./img/8-6.png]]
-- Now test your code. Look at the bottom of the pyCharm window. What is this telling you?
+- Now test your code. Look at the bottom of the pyGame shell window. What is this telling you?
 - If you're struggling with the concepts, this video tutorial will help with this lesson:
 #+BEGIN_HTML
 <iframe width="650" height="393" src="https://www.youtube.com/embed/9yDunCtTTJw" frameborder="0" allowfullscreen></iframe>
@@ -210,7 +222,7 @@ pythag(player1X, player1Y, targetX, targetY)
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- *Silver:* Add comments explaining your code, then upload it form marking.
+- *Silver:* Add comments explaining your code, then upload it for marking.
 - *Gold:* Use the function from the 'Text me' lesson to display how accurate the player was.
 - *Platinum:* Use Pygame.draw.line to draw the 3 sides of the triangle, like in the screenshot below.
 [[./img/8-pythanFinished.png]] 

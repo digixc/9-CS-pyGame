@@ -95,13 +95,33 @@ for the JavaScript code in this tag.
 <p onclick="underlayon('hsla(300,100%,25%,0.3)')">Purple</p>
 <p onclick="underlayon('hsla(60,100%,50%,0.3)')">Yellow</p>
 </div>
-<div id="outline-container-sec-1" class="outline-2 activity">
-<h2 id="sec-1">Text me</h2>
+<div id="outline-container-sec-1" class="outline-2 objectives">
+<h2 id="sec-1">Objectives</h2>
 <div class="outline-text-2" id="text-1">
 </div>
 <div id="outline-container-sec-1-1" class="outline-3 learn">
-<h3 id="sec-1-1">Learn It</h3>
+<h3 id="sec-1-1">Developing <b>Programming and Development</b> (learning strand), specifically:</h3>
 <div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Understand and use <b>functions</b> to perform operations when called.
+</li>
+<li>Understand and use <b>selection</b>, i.e. using <b>if-else, if-elif</b>, to branch the flow of an action.
+</li>
+<li>Understand the process of outputting a text message to the screen.
+</li>
+<li>Understand and make use of parameters within our functions.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2">Text me</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 learn">
+<h3 id="sec-2-1">Learn It</h3>
+<div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>Almost all games require text to be displayed on the screen.
 </li>
@@ -109,14 +129,14 @@ for the JavaScript code in this tag.
 </li>
 <li>In computing this is called a <i>function</i>. It is an independent block of code that lives outside the main program and only runs when asked to do so by the main program.
 </li>
-<li>Functions definitions always sit at the top of the code after the import statements.
+<li>Function declarations always sit at the top of the code after the import statements.
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-2" class="outline-3 try">
-<h3 id="sec-1-2">Try It</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-sec-2-2" class="outline-3 try">
+<h3 id="sec-2-2">Try It</h3>
+<div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>Let's start by writing a simple program, and looking at how we can adapt it to to use functions. 
 </li>
@@ -140,9 +160,9 @@ WHILE keepGoing == True:
 END WHILE
 </pre>
 <ul class="org-ul">
-<li>In this program, the <code>WHILE</code> loop has a lot of lines of code in it. 
+<li>In this program, the <b>WHILE</b> loop has a lot of lines of code in it. 
 </li>
-<li>It'd be a lot easier to read the code if there were less of it. 
+<li>It would be a lot easier to read the code if there were less of it. 
 </li>
 <li>Let's make some functions to clean this up. Our code <i>could</i> instead say:
 </li>
@@ -173,51 +193,52 @@ END WHILE
 21 END WHILE
 </pre>
 <ul class="org-ul">
-<li>The the program runs, the two functions at the very top (lines 1-8) are read by the computer, but not used.
+<li>When the program runs, the <b>two functions</b> at the very top (<i>lines 1-8</i>) are <b>read by the computer</b>, but <b>not used</b>.
 </li>
-<li>In effect, we are teaching the computer two new sets of code that we will eventually ask it to run when desired. The first line of code carried out is on line 11 (line 10 is a comment).
+<li>In effect, we are teaching the computer two new sets of code that we will eventually ask it to run when desired. The first line of code carried out is on line 11 (<i>line 10 is a comment</i>).
 </li>
-<li><b>Pro tip:</b> When you ask the computer to run a function, we use the term <i>calling</i>.
+<li><b>Pro Tip:</b> When you ask the computer to run a function, we use the term <i>calling</i>.
 </li>
-<li>On line 13, the program calls the <code>getNumbers()</code> function. The program then runs the code on lines 1-4.
+<li><b>On line 13</b>, the program calls the <b>getNumbers()</b> function. The program then runs the code on lines 1-4.
 </li>
-<li>The result of running that function is two numbers entered by the user, and stored in variables called <code>num1</code> and <code>num2</code>. 
+<li>The result of running that function is the two numbers entered by the user are stored in variables called: <b>num1</b> and <b>num2</b>. 
 </li>
-<li>When line 4 of the code is run, the values entered by the user are <code>returned</code> to where we were in the program before the function was called (line 13). The values are stored in <code>firstNumber</code> and <code>secondNumber</code>. 
+<li>When line 4 of the code is run, the values entered by the user are <b>returned</b> to where we where in the program before the function was called (<i>line 13</i>). The values are stored in: <b>firstNumber</b> and <b>secondNumber</b>. 
 </li>
-<li>The same process is repeated on line 14, but this time the numbers to be calculated are sent along when the <code>doTheMaths()</code> function is called. 
+<li>The same process is repeated on line 14, but this time the numbers to be calculated are sent along when the <b>doTheMaths()</b> function is called. 
 </li>
 <li>Here's the Python code to accomplish this task:
 </li>
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python">def getNumbers():
-    num1 = int(input("What number would you like? "))
-    num2 = int(input("What number to multiply it by? "))
-    return num1, num2
+<pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">getNumbers</span>():
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">num1</span> = <span style="color: #483d8b;">int</span>(input(<span style="color: #8b2252;">"What number would you like? "</span>))
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">num2</span> = <span style="color: #483d8b;">int</span>(input(<span style="color: #8b2252;">"What number to multiply it by? "</span>))
+    <span style="color: #a020f0;">return</span> num1, num2
 
-def doTheMaths(a, b):
-    theAnswer = a * b
-    return theAnswer
+<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">doTheMaths</span>(a, b):
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">theAnswer</span> = a * b
+    <span style="color: #a020f0;">return</span> theAnswer
 
 
-''' THE ACTUAL PROGRAM STARTS HERE '''
-keepGoing = True
-while keepGoing == True:
-    firstNumber, secondNumber = getNumbers()
-    result = doTheMaths (firstNumber, secondNumber)
-    print("The answer is " + str(result))
+<span style="color: #8b2252;">''' THE ACTUAL PROGRAM STARTS HERE '''</span>
+<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">keepGoing</span> = <span style="color: #a020f0;">True</span>
+<span style="color: #a020f0;">while</span> <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">keepGoing</span> == <span style="color: #a020f0;">True</span>:
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">firstNumber</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">secondNumber</span> = getNumbers()
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">result</span> = doTheMaths (firstNumber, secondNumber)
+    <span style="color: #a020f0;">print</span>(<span style="color: #8b2252;">"The answer is "</span> + <span style="color: #483d8b;">str</span>(result))
 
-    yourAnswer = input("Again? ")
-    if yourAnswer == "no":
-	keepGoing = False
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">yourAnswer</span> = <span style="color: #483d8b;">input</span>(<span style="color: #8b2252;">"Again? "</span>)
+    <span style="color: #a020f0;">if</span> <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">yourAnswer</span> == <span style="color: #8b2252;">"no"</span>:
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">keepGoing</span> = <span style="color: #a020f0;">False</span>
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
 <li>Put the code into a new, empty Python file, save it and run it.
 </li>
-<li><b>Challenge:</b> Could you add a function to replace the last 3 lines of the program (seeing if the user wishes to play again) with 1 line?
+<li><b>Challenge:</b> Could you add a function to replace the last 3 lines of the program (<i>Asking if the user wishes to play again</i>) with 1 line?
 </li>
 <li>If you're struggling with the concept of functions the task above is explained in the tutorial below:
 </li>
@@ -225,9 +246,9 @@ while keepGoing == True:
 <iframe width="650" height="393" src="https://www.youtube.com/embed/mOeYxnaYzNE" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
-<div id="outline-container-sec-1-3" class="outline-3 code">
-<h3 id="sec-1-3">Download It</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-sec-2-3" class="outline-3 code">
+<h3 id="sec-2-3">Download It</h3>
+<div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
 <li>Start by picking up the template for this lesson:
 </li>
@@ -236,11 +257,11 @@ while keepGoing == True:
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-4" class="outline-3 try">
-<h3 id="sec-1-4">Try It</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-sec-2-4" class="outline-3 try">
+<h3 id="sec-2-4">Try It</h3>
+<div class="outline-text-3" id="text-2-4">
 <ul class="org-ul">
-<li>We're going to create a function to allow us to draw text onto the screen.
+<li>We are going to create a function to allow us to draw text onto the screen.
 </li>
 <li>Our pseudocode to do this is as follows:
 </li>
@@ -260,12 +281,13 @@ CALL textDraw("Good morning, Dave")
 </pre>
 
 <ul class="org-ul">
-<li>To code this in Python, first we need to load a font from the PC's font collection and store it in a variable for later use. Add this line just above the game loop (around line 18).
+<li>To code this in Python, first we need to load a font from the PC's font collection and store it in a variable for later use. Add this line just above the game loop (<i>Around line 18</i>).
 </li>
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python">fontName = pygame.font.match_font('arial')
+<pre class="src src-python"><span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">fontName</span> = pygame.font.match_font(<span style="color: #8b2252;">'arial'</span>)
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
@@ -278,19 +300,20 @@ CALL textDraw("Good morning, Dave")
 </p>
 </div>
 <ul class="org-ul">
-<li>Write the code for our function next, adding this code at the top of the program, immediately underneath the <code>import</code> statements near line 4. 
+<li>Write the code for our function next, adding this code at the top of the program, immediately underneath the <b>import</b> statements near line 4. 
 </li>
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python">def textDraw(msgText):
-    font = pygame.font.Font(fontName, 22)
-    text_surface = font.render(msgText, True, white)
-    screen.blit(text_surface, (100, 100))
+<pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">textDraw</span>(msgText):
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">font</span> = pygame.font.Font(fontName, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">22</span>)
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">text_surface</span> = font.render(msgText, <span style="color: #a020f0;">True</span>, white)
+    screen.blit(text_surface, (<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">100</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">100</span>))
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
-<li>It'll look like this:
+<li>It should look like this:
 </li>
 <li><b>NOTE:</b> Make sure you indent your code like in the screenshot above, or this won't work.
 </li>
@@ -308,11 +331,12 @@ CALL textDraw("Good morning, Dave")
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python">textDraw("Good morning, Dave")
+<pre class="src src-python">textDraw(<span style="color: #8b2252;">"Good morning, Dave"</span>)
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
-<li>It'll look like this:
+<li>It will look like this:
 </li>
 <li><b>NOTE:</b> Again, ensure that you've indented the code.
 </li>
@@ -324,25 +348,26 @@ CALL textDraw("Good morning, Dave")
 </div>
 </div>
 </div>
-<div id="outline-container-sec-1-5" class="outline-3 program">
-<h3 id="sec-1-5">Program It</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-sec-2-5" class="outline-3 program">
+<h3 id="sec-2-5">Program It</h3>
+<div class="outline-text-3" id="text-2-5">
 <ul class="org-ul">
-<li>It would be even more useful if we could tell the <code>textDraw</code> function which X, Y coordinates we’d like the text to be shown at. At the moment, we're always drawing at 100, 100.
+<li>It would be even more useful if we could tell the <b>textDraw</b> function which <b>X</b> and <b>Y</b> coordinates we would like the text to be shown at. At the moment, we're always drawing at 100, 100.
 </li>
-<li>We can accomplish this by adding another <code>parameter</code> to the function. We have one at the moment, called <code>msgText</code>. Modify your function definition at the top of the code, like this:
+<li>We can accomplish this by adding another <b>parameter</b> to the function. We have one at the moment, called <b>msgText</b>. Modify your function definition at the top of the code, like this:
 </li>
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python">def textDraw(msgText, XYPosition):
-    font = pygame.font.Font(fontName, 22)
-    text_surface = font.render(msgText, True, white)
+<pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">textDraw</span>(msgText, XYPosition):
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">font</span> = pygame.font.Font(fontName, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">22</span>)
+    <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">text_surface</span> = font.render(msgText, <span style="color: #a020f0;">True</span>, white)
     screen.blit(text_surface, XYPosition)
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
-<li><b>NOTE:</b> Two lines of code need to be changed; the first and last lines in the function definition. It should look like this:
+<li><b>NOTE:</b> Two lines of code need to be changed; the <b>first</b> and <b>last lines</b> in the function definition. It should look like this:
 </li>
 </ul>
 
@@ -351,14 +376,15 @@ CALL textDraw("Good morning, Dave")
 </p>
 </div>
 <ul class="org-ul">
-<li>We'll also need to modify the function call so that we send it the values we want to use in our program. 
+<li>We'll also need to modify the function call, so that we send it the values that we want to use in our program. 
 </li>
-<li>Change this line in your game loop (around line 32)  to send over more information about where we want the text to appear.
+<li>Change the following line in your game loop (<i>Around line 32</i>)  to send over more information about where we want the text to appear:
 </li>
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python">textDraw("Good morning, Dave", (400, 60))
+<pre class="src src-python">textDraw(<span style="color: #8b2252;">"Good morning, Dave"</span>, (<span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">400</span>, <span style="font-family: Monaco,monospace,sans-serif; color: #000000; background-color: #ffffff;">60</span>))
+</pre>
 </pre>
 </div>
 <ul class="org-ul">
@@ -379,19 +405,19 @@ CALL textDraw("Good morning, Dave")
 <iframe width="650" height="393" src="https://www.youtube.com/embed/0c8C_ECq0_Y" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
-<div id="outline-container-sec-1-6" class="outline-3 badge">
-<h3 id="sec-1-6">Badge It</h3>
-<div class="outline-text-3" id="text-1-6">
+<div id="outline-container-sec-2-6" class="outline-3 badge">
+<h3 id="sec-2-6">Badge It</h3>
+<div class="outline-text-3" id="text-2-6">
 <ul class="org-ul">
 <li><b>Silver:</b>
 <ul class="org-ul">
-<li>Add 2 more function calls using your <code>textDraw()</code> function to draw more text at different points on the screen. Add comments to your code, and upload it to <a href="https://www.bournetolearn.com">BourneToLearn.com</a> 
+<li>Add 2 more function calls using your <b>textDraw()</b> function to draw more text at different points on the screen. Add comments to your code, and upload it to <a href="https://www.bournetolearn.com">BourneToLearn.com</a> 
 </li>
 </ul>
 </li>
 <li><b>Gold:</b> 
 <ul class="org-ul">
-<li>Add another paramenter to your function to control the text size.
+<li>Add another <b>paramenter</b> to your function to control the text size.
 </li>
 <li>Draw the words small, medium and lage below each other on the screen, each in different sizes.
 </li>
@@ -415,7 +441,7 @@ CALL textDraw("Good morning, Dave")
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="validation"></p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

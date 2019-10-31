@@ -8,7 +8,7 @@
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
 
 #+TITLE: Pygame
-#+AUTHOR: Oliver Drayton
+#+AUTHOR: Stephen Fone
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
@@ -112,32 +112,44 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
+* Objectives
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: objectives
+:END:
+** Developing *Programming and Development* (learning strand), specifically:
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Understand the concept of *Sprites* and how they can used as game objects.
+- Understand and use variables to change to keep track of the X and Y coordinates of a sprite.
+- Understand the process of detecting collisions.
+- Understand how to use the random function to generate a random sprite target.
 * Collision!
  :PROPERTIES:
  :HTML_CONTAINER_CLASS: activity
  :END:
-- Open your .py file from lesson 5 in pyCharm. It should be in your home drive, neatly stored in a folder. 
+- Open your Week5.py file from lesson 5 in pyGame. It should be in your home drive, stored in your Year 9 Game Development folder. 
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- We are going to make it into a simple game, to learn to use collisions. 
+- We are going to make a *simple game* and learn to use *collisions*. 
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- In addition to the one we made in the previous lesson, we will create another sprite using a basic shape called =target=. We will then detect if =player1= has collided with the =target=.
-- First we need a variable to hold the x and y position of the target.
-- Add these lines at the bottom of the lines of the game setup section, directly underneath the line that says =player1Image = pygame.transform.scale(player1Image, player1ImageSizeXY)= which you wrote in the last lesson. It'll be around line 20ish. 
+- In addition to the sprite we made in the previous lesson, we will create another sprite using a basic shape called *target*. We will then detect if *player1* has collided with the *target*.
+- First we need a *variable* to *hold* the *x* and *y position* of the *target*.
+- Add these lines at the bottom of the lines of the game setup section, directly underneath the line that says: *player1Image=pygame.transform.scale(player1Image, player1ImageSizeXY)* which you wrote in the last lesson. It'll be around line 20. 
 #+begin_src python
 pygame.mouse.set_visible(False)
 targetXY = [500, 500]
 #+end_src
 - Your code will look a little like this now:
 [[./img/6-1.png]]
-- Now, we'll draw the target sprite onto the screen.
-- Add these lines of code in your game loop, directly underneath the line that says =player1XY = newXPosition, newYPosition= 
-- *NOTE:* You'll need to indent each of these lines twice, to that they're part of the =for= event loop.
+- Next, we will draw the target sprite onto the screen.
+- Add the following lines of code in your game loop, directly underneath the line that says: *player1XY=newXPosition, newYPosition* 
+- *NOTE:* You'll need to *indent each of these lines twice*, to that they're part of the *FOR* event loop.
 #+begin_src python
 target = pygame.draw.circle(screen, red, (300, 600), 20)
 if player1.colliderect(target):
@@ -145,16 +157,18 @@ if player1.colliderect(target):
 #+end_src
 - The code should look like this:
 [[./img/6-2.png]]
-- Run the code, and see what happens. 
-- Printing 'hit' in the console is not very exciting. Let's change the code so the target disappears and reappears at a random =x= and =y= position when touched by the player sprite.
-- In order to use the random numbers, we need to =import= some extra code to allow it.
+- Run the code, and see what happens? 
+- Printing 'hit' in the console is not very exciting. Let's change the code so the target disappears and reappears at a random *x* and *y* position when touched by the player sprite.
+- In order to use the random numbers, we need to *import* some extra code to allow it.
 - Add this line at the very top of your program:
 #+begin_src python
 import random
 #+end_src
-It'll look like this...
+It'll look like this:
 [[./img/6-3.PNG]]
- - Now, we can use a new function called =random.randint()=  to create random numbers for the =x= and =y= postions of the target. Comment out the =print("hit")= line you wrote previously by placing a hash symbol (#) in front of it, then add these lines underneath. Don't forget that they're part of the =IF= block, so will need to be indented with the tab key three times.
+ - Next, we can use a new function called: *random.randint()* to create random numbers for the *x* and *y* postions of the target. Comment out the *print("hit")* line you wrote previously by
+   placing a hash symbol *(#)* in front of it.
+- Then add the following lines underneath. Don't forget that they're part of the *IF* block, so will *need* to be *indented* with the tab key *three times*.
 #+begin_src python
 targetXY[0] = random.randint(0, SCREENWIDTH)
 targetXY[1] = random.randint(0, SCREENHEIGHT)
@@ -163,11 +177,11 @@ targetXY[1] = random.randint(0, SCREENHEIGHT)
 #+begin_src python
 target = pygame.draw.circle(screen, red, (300, 600), 20)
 #+end_src
-- ...and change it to say:
+- Change it to say:
 #+begin_src python
 target = pygame.draw.circle(screen, red, targetXY, 20)
 #+end_src
-- The code should look a little like this (the line numbers won't be exact, but will be in this area of the program):
+- The code should look a little like this (/the line numbers won't be exact, but will be in this area of the program/):
 [[./img/6-4.png]]
 ** Test It
 :PROPERTIES:
@@ -175,8 +189,8 @@ target = pygame.draw.circle(screen, red, targetXY, 20)
 :END:
 - Run the program to test it. 
 - There are a number of improvements we can make.
-- It would be better if the user had to collide with the target *and* click the mouse to score a point. We could add this by changing our collision code slightly. 
-- Add another =IF= statement inside the game loop to force the user to click on the target. *NOTE:* Only the first of the lines below is to be added; the others are shown to help you see where to place the code, and help ensure it is indented correctly. 
+- It would be better if the user had to *collide with the target* and *click the mouse to score a point*. We could add this by changing our collision code slightly. 
+- Add another *IF* statement inside the game loop to force the user to click on the target. *NOTE:* Only the first line below is to be added; the others are shown to help you see where to place the code, and help ensure it is indented correctly. 
 #+begin_src python
 if pygame.mouse.get_pressed()[0] == 1:
     if player1.colliderect(target):
@@ -184,30 +198,30 @@ if pygame.mouse.get_pressed()[0] == 1:
         targetXY[0] = random.randint(0, SCREENWIDTH)
         targetXY[1] = random.randint(0, SCREENHEIGHT)
 #+end_src
-- The code should look something like this. *NOTE:* The lines of code under the new =IF= statement will all need to be intended.
+- The code should look something like this. *NOTE:* The lines of code under the new *IF* statement will all need to be intended.
 [[./img/6-5.png]]
-- This feature also introduces a bug; the player can hold down the mouse button constantly so that the they just have to touch the target.
+- This new feature also introduces a *bug*; the /player can hold down the mouse button constantly/, so that they just have to touch the target.
 - This is slightly more complex to fix. We'll need to create a variable to prevent the player from 'firing' again until until the mouse button is released.
-  - Create the =fireLock= variable and set to =0= at the start of the game, so the player can fire. Add this line of code just before your game loop:
+  - Create the *fireLock* variable and set to: *0* at the start of the game, so the player can fire. Add this line of code just before your game loop:
 #+begin_src python
 fireLock = 0
 #+end_src
-  - ...so it looks like this:
+  - So it looks like this:
  [[./img/6-6.PNG]]
-  - Next, we'll need to set =fireLock= to =1= when the mouse button is pushed, by modifying our =IF= statement from before a little bit. 
+  - Next, we'll need to set: *fireLock* to: *1* when the mouse button is pushed, by modifying our *IF* statement from before a little bit. 
   - Find the line that says:
 #+begin_src python
 if pygame.mouse.get_pressed()[0] == 1:
 #+end_src
-  - and change it to:
+  - Change it to:
 #+begin_src python
 if pygame.mouse.get_pressed()[0] == 1 and fireLock == 0:
     fireLock = 1
 #+end_src
   - The code should now look something like this:
  [[./img/6-7.PNG]]
-  - Finally, we'll need to make it so that we only reset =fireLock= to =0= when the mouse button is released. We do this by adding another event listener to our event loop.
-  - Add this =IF= statement inside the gameState = "exit" line in your game loop.
+  - Finally, we'll need to make it so that we only reset: *fireLock* to *0* when the mouse button is released. We do this by adding another event listener to our event loop.
+  - Add this *IF* statement inside the: *gameState = "exit"* line in your game loop.
 #+begin_src python
 if event.type == pygame.MOUSEBUTTONUP:
     fireLock = 0
@@ -223,7 +237,7 @@ if event.type == pygame.MOUSEBUTTONUP:
 :HTML_CONTAINER_CLASS: badge
 :END:      
 - *Silver:* Add comments to your code and in comments below your code.
-- *Gold:* The target is currently drawn over the top of the player - fix this bug so that it appears behind. 
+- *Gold:* The target is currently drawn over the top of the player - Fix this bug so that it appears behind. 
 - *Platinum:* Change the target circle to an image of your choice instead.
 
 
