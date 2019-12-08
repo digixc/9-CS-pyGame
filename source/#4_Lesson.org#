@@ -1,0 +1,279 @@
+ho#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
+
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+HTML_HEAD_EXTRA: <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+#+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
+#+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
+
+#+TITLE: Pygame
+#+AUTHOR: Stephen Fone
+
+#+BEGIN_HTML
+  <div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/stsb11/9-CS-pyGame">Fork me on GitHub</a>
+    </div>
+  </div>
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
+      <li><a href="6_Lesson.html">Week6</a></li>
+      <li><a href="7_Lesson.html">Week7</a></li>
+      <li><a href="8_Lesson.html">Week8</a></li>
+      <li><a href="9_Lesson.html">Week9</a></li>
+      <li><a href="assessment.html">Assessment</a></li>
+    </ul>
+  </div>
+
+<div id="underlay" onclick="underlayoff()">
+</div>
+<div id="overlay" onclick="overlayoff()">
+</div>
+<div id=overlayMenu>
+<p onclick="overlayon('hsla(0, 0%, 50%, 0.5)')">Grey overlay</p>
+<p onclick="underlayon('hsla(300,100%,50%, 0.3)')">Pink</p>
+<p onclick="underlayon('hsla(80, 90%, 40%, 0.4)')">Green</p>
+<p onclick="underlayon('hsla(240,100%,50%,0.2)')">Blue</p>
+<p onclick="underlayon('hsla(40,100%,50%,0.3)')">Cream</p>
+<p onclick="underlayon('hsla(300,100%,40%,0.3)')">Liliac</p>
+<p onclick="underlayon('hsla(300,100%,25%,0.3)')">Purple</p>
+<p onclick="underlayon('hsla(60,100%,50%,0.3)')">Yellow</p>
+</div>
+
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Objectives
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: objectives
+:END:
+** Developing *Programming and Development* (learning strand), specifically:
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Understand the concept of *Keyboard Events* and how they can control the movement of an object in a game.
+- Understand and use variables to change to reflect/keep track of the state (/position, colour etc/) of a game object.
+- Understand and use *selection*, i.e. using *if-else, if-elif*, to branch the flow of an action.
+* Keyboard events
+ :PROPERTIES:
+ :HTML_CONTAINER_CLASS: activity
+ :END:
+** Download It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+- Start by picking up a template to use in this lesson: 
+- [[./doc/pygameDevTemplate.py][Right click and save as - for a fresh template]]
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- As we are making a game for the PC platform, the keyboard is a very important input tool.
+- We are going to control the moment of a player on the screen with the arrow keys. Add these lines of code inside the game loop, inside your *for* loop. 
+- Put the code immediately underneath the *# your code starts here* line.
+- *Note:* As always, you'll need to ensure the code is indented for it to work.
+#+begin_src python
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_LEFT:
+            print("Left")
+        if event.key == pygame.K_RIGHT:
+            print("Right")
+#+end_src
+- The code will look like this:
+[[./img/4-0.PNG]]
+- If you run this code and look in the interpreter window, you'll be able to see the program letting you know when you press left and right. You might be able to add up and down for yourself too.
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Let's now get the shape moving around on the screen when left/right keys are pressed. 
+- Our pseudocode for this will be:
+#+begin_src
+Set up variables: XPos=100 and YPos=100 for the player's position.
+
+BEGIN LOOP
+    IF player presses the left arrow THEN
+        player1XPos = player1XPos - 5
+    ELSE IF player presses the right arrow THEN
+        player1XPos = player1XPos + 5
+    END IF
+
+    Re-draw the sprite at player1XPos, player1YPos.
+END LOOP
+#+end_src
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- We'll start by adding our variables. 
+- Add these lines of code directly below the *gameState="running"* line.
+#+begin_src python
+player1XPos = 100
+player1YPos = 100
+#+end_src
+- The code will look like this:
+[[./img/4-1.png]]
+- We then create *Event Listeners* in the game loop. 
+- To do this, change the lines that say *print("left")* and *print("right")* to say:
+#+begin_src python
+if event.type == pygame.KEYDOWN:
+    if event.key == pygame.K_LEFT:
+        player1XPos -= 5
+    elif event.key == pygame.K_RIGHT:
+        player1XPos += 5
+#+end_src
+- Your code should look like this:
+[[./img/4-2.PNG]]
+- Run the program. You will find the player moves each time the key is pressed. 
+- This is good for some games but other times it is desirable to keep the player moving until another key is pressed (/like in snake-type games/). Currently the *Event Listener* and the *Event Handler* are in the same block of code.
+- We will separate the two out for continous movement.
+- We will need two new variables outside of the game loop to hold the player's speed and direction. 
+- The pseudocode for our new movement program is:
+#+begin_src
+Set up variables:
+   player1Direction = "nothing"
+   player1Speed = 5
+   player1XPos = 100
+   player1YPos = 100
+
+BEGIN LOOP
+    Has the player used the mouse or keyboard?
+       YES: Has the player pushed the left arrow?
+               YES: player1Direction is left
+            Has the player pushed the right arrow?
+               YES: player1Direction is right
+
+    Is the player1Direction left?
+        YES: Decrease the player1XPos variable by 5.
+    Is the player1Direction right?
+        YES: Increase the player1XPos variable by 5.
+
+    Clear the screen, and draw the player1 shape at player1XPos, player1YPos. 
+END LOOP
+#+end_src
+
+- Let's implement this in code. 
+- Add these variables underneath the *player1YPos = 100* line:
+#+begin_src python
+player1Direction = ""
+player1Speed = 5
+#+end_src
+- This should look like this:
+[[./img/4-3.png]]
+- Next, we'll change the game loop to modify the event listener and all and event handler.
+- Replace your game loop code with this code. Ensure you keep all the indents where they should be. You may find you need to tweak the indents with the tab key once you've pasted the code. 
+#+begin_src python
+while gameState != "exit":  # game loop - note: everything in the mainloop is indented one tab
+    for event in pygame.event.get():  # get user interaction events
+        if event.type == pygame.QUIT:  # tests if window's X (close) has been clicked
+            gameState = "exit"  # causes exit of game loop
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                # player1XPos -= 5
+                player1Direction = "left"
+            elif event.key == pygame.K_RIGHT:
+                # player1XPos += 5
+                player1Direction = "right"
+
+    # Player 1 Event handler code now...
+    if player1Direction == "left":
+        player1XPos -= player1Speed
+    elif player1Direction == "right":
+        player1XPos += player1Speed
+
+    screen.fill(black)
+    player1 = pygame.draw.rect(screen, green, (player1XPos, player1YPos, 20, 20))
+#+end_src
+- This will look like this:
+[[./img/4-4.png]]
+- Run the program with *Shift-F10*, and steer the square with the left/right cursor keys. 
+- What's different between this code and the previous version?
+- Comment the lines of code to explain what they do. 
+
+#+BEGIN_HTML
+<div style="position:relative;height:0;padding-bottom:75.0%"><iframe src="https://www.youtube.com/embed/dcY2ZaVd5xo?ecver=2" width="480" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+#+END_HTML
+
+** Badge Tasks
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- *Silver:* Add the ability to move *player1* up and down *or* add comments to your code to explain how it works.
+- *Gold:* Add the functionality to increase and decrease *player1Speed* with the *Q* and *W* keys.
+- *Platinum*: Add a feature to make *player1* visible/invisible when the space bar is pressed, *or* stop the square from travelling beyond the edge of the window. 
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Be honest and take the quiz using the link below to assess your own progress. Your teacher will randomly check some students work to moderate their marking.
+- Once you have done above tasks and tested they are working as intended, click [[https://www.bournetolearn.com/quizzes/y9-gameDev/Lesson_4][here]] for the self assessment.
