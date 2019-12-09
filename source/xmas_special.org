@@ -118,73 +118,29 @@
 - Learning using if statements (conditionals) to branch instructions in a solution
 - Learning what computers events are and how they are used in game development
 - Understanding how sequences of instructions are put together logically in solving a given problem
-* Problems and Problem Solving
+* The game: Santa picks up moving presents
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
 
-** Problem solving
+** The Game Play
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END: 
-- You have been solving problems all your life, from obvious problems such as puzzle games, like the [[https://en.wikipedia.org/wiki/Tower_of_Hanoi][Tower of Hanoi]], to going through your every day life. As you mature, you are getting better at it.
-
-[[./img/Tower_of_Hanoi_4.gif]]
-
-     By [[https://commons.wikimedia.org/w/index.php?curid%3D85401][André Karwath aka Aka]] - Own work, CC BY-SA 2.5
-
-- Lets work through some problems and see how you solve them.
-
-#+BEGIN_SRC 
-Problem 1: You have been asked by your teacher to rank the quiz score 
-           in your form for each of the 8 teams from the highest to the lowest.
-           
-How do you do it? 
-          
-#+END_SRC
-- Try to describe the steps you used to the person next to you. 
-- Is your solution more efficient than your peers?
+- Santa's sleigh can move up and down along the left side a game screen
+- Santa's move is controlled by UP and DOWN arrow keys
+- A present is randomly placed at the right edge of the screen
+- The present is moving at an initial speed towards the left of the screen
+- When Santa collides with the present, the present disappears and Santa gets one point
+- Another present appears at the right edge, but with increased speed
+- The game is over when Santa misses a present
+ 
 
 
-#+BEGIN_SRC 
-Problem 2: You have walked to your school along the same route for months
- with your two of your best friend. You meet them up along the way. 
- But you have just made another friend and you want to meet him along
- the way. You need to adjust your route so that you don't have to walk
- unneccessary distance. See the map below.
-#+END_SRC
-[[./img/streetMapRoute.jpeg]]
-
-- Can you describe the steps and reasons you followed to reach your solution for the above problem to the person next to you?
-- Think how complex the problem would be if you have to meet up with more friends on your way to school.
-- How parcel delivery companies plan their delivery routes? 
-
-* Computational Thinking
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-** Learn It 
+** The Game Skeleton Code and Assets
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END: 
-- As a human, you find that sorting the scores from 8 teams is quite easy.
-- But what about sorting the whole year's? the whole school's? You can, but it will take you a much longer time.
-- You may be already thinking about computers and using spreadsheet to help you sort a much longer list of scores.
-- But humans must create spreadsheet software first. What's more the spreadsheet software humans created must be able to sort numbers.
-- When we deal with large amount of data and more complex problems, computers can *help* us to solve those problems more quickly than humans can, *BUT* humans must describe the steps to solve the problems to the computers first.
-- *Computational thinking* is the thought processes of understanding a problem and presenting its solution(s) in such a way that a computer can effectively carry out.
-
-** Key Points Check
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: key
-:END: 
-   1. Humans must develop possible solutions
-   2. Humans must present the solutions in a way computers can understand
-   3. Computers can only help us solve problems
-   4. =Computational thinking= is the thought processes of understanding a problem and presenting its solution(s) in such a way that a computer can follow and carry out the solution 
-** Badge It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-*** Learning strand: *Information Technology*
-- Read[[http://www.bcs.org/content/ConWebDoc/55416][ this article]]. Use your own words, one paragraph each, list 4 things you have learned from the article on computational thinking.
+- Right click and choose save as to download [[./doc/santa-S.py][the skeleton code]] to your home drive, computer science folder
+- Right click and choose save as to download [[./doc/santa.png][the Santa sleigh image]] to the same place
+- Right click and choose save as to download [[./doc/present.png][the present imag]]e to the same place
