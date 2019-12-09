@@ -16,14 +16,14 @@ santa = pygame.image.load('santa.png')
 SANTA_WIDTH, SANTA_HEIGHT = santa.get_size()
 santa = pygame.transform.scale(santa, (SANTA_WIDTH // 2, SANTA_HEIGHT // 2))
 santa_y = HEIGHT / 2
-SANTA_SPEED = 5
+SANTA_SPEED = 1
 
 # code for loading the present image and set up Santa in the game
 present_image = pygame.image.load('present.png')
 PRESENT_WIDTH, PRESENT_HEIGHT = present_image.get_size()
 present = pygame.transform.scale(present_image, (PRESENT_WIDTH, PRESENT_HEIGHT))
-PRESENT_SPEED = 0.5
-present_x = WIDTH + PRESENT_WIDTH//2
+PRESENT_SPEED = 0.1
+present_x = WIDTH - PRESENT_WIDTH//2
 present_y = random.randint(0, HEIGHT)
 
 picked = False
