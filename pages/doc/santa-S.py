@@ -34,7 +34,11 @@ while True:
     
     # add santa to the middle of edge of the screen with x=0, and y half way
     screen.blit(santa, (0, santa_y))
-                
+
+    # the santa sprite has a dimension defined as an invisible rectangle
+    # santa_rect is used to store the shape for santa
+    # santa_rect.x is always 0 as Santa is always at the left edge
+    # santa_rect.y is a variable as player moves Santa up and down
     santa_rect = santa.get_rect()
     santa_rect.x = 0
     santa_rect.y = santa_y
