@@ -8,9 +8,9 @@
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
 
 #+TITLE: Pygame
-#+AUTHOR: Stephen Fone
+#+AUTHOR: Oliver Drayton, X Ellis, Stephen Fone
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
       <a href="https://github.com/stsb11/9-CS-pyGame">Fork me on GitHub</a>
@@ -46,7 +46,7 @@
 <p onclick="underlayon('hsla(60,100%,50%,0.3)')">Yellow</p>
 </div>
 
-#+END_HTML
+#+END_EXPORT
 * COMMENT Use as a template
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -197,9 +197,9 @@ player1 = pygame.draw.rect(screen, red, (player1X, player1Y, 40, 40))
 [[./img/3-3.PNG]]
 - Run the program with *Shift-F10*. What happens?
 - If you're struggling with the tasks, you can go through the notes above using this video tutorial:
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 <iframe width="650" height="393" src="https://www.youtube.com/embed/jkM4VFE98Vo" frameborder="0" allowfullscreen></iframe>
-#+END_HTML
+#+END_EXPORT
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
