@@ -144,3 +144,14 @@
 - Right click and choose save as to download [[./doc/santa-S.py][the skeleton code]] to your home drive, computer science folder
 - Right click and choose save as to download [[./doc/santa.png][the Santa sleigh image]] to the same place
 - Right click and choose save as to download [[./doc/present.png][the present imag]]e to the same place
+- After you have downloaded the above three files to the same location, open the python skeleton code by right click and choose to *edit with* IDLE.
+- Follow the instructions on each task to complete the game. Your completed game should look like this:
+#+BEGIN_EXPORT html
+<video controls>
+<source src='./doc/xmas_pygame.mp4'>
+</video>
+#+END_EXPORT
+
+
+
+
