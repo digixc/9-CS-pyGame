@@ -147,7 +147,7 @@
 - After you have downloaded the above three files to the same location, open the python skeleton code by right click and choose to *edit with* IDLE.
 - Follow the instructions on each task to complete the game. Your completed game should look like this:
 #+BEGIN_EXPORT html
-<video controls>
+<video controls autoplay loop>
 <source src='./doc/xmas_pygame.mp4'>
 </video>
 #+END_EXPORT
